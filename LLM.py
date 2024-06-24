@@ -1,12 +1,15 @@
 from zhipuai import ZhipuAI
 import json
+# from execute_plan import logger
+
 MAX_RETRY = 5
-API_KEY = <YOUR_API_KEY>
+API_KEY = "fe8f7e3bf14783aa4ca5f365e2a71afa.yy7GCbZOYPQg1pJP"
 
 def LLM(query):
+    # logger.debug(f"query: {query}")
     client = ZhipuAI(api_key=API_KEY)
     response = client.chat.completions.create(
-    model="glm-4",
+    model="glm-4-air",
         messages=[
             {"role": "user", "content": query},
         ],

@@ -3,7 +3,7 @@ import json, re
 from LLM import get_json_response
 from API import API
 
-API_KEY = <YOUR_API_KEY>
+API_KEY = "fe8f7e3bf14783aa4ca5f365e2a71afa.yy7GCbZOYPQg1pJP"
 
 tools = [
     {
@@ -170,7 +170,7 @@ def get_tools_response(query):
 
     client = ZhipuAI(api_key=API_KEY)
     response = client.chat.completions.create(
-        model="glm-4",
+        model="glm-4-air",
         messages=messages,
         tools=tools,
         tool_choice="auto",
